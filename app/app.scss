@@ -1,18 +1,19 @@
 // Global SCSS styling
 // @see https://docs.nativescript.org/ui/styling
 
-// todo: add fonts
-
 @import './styles/variables';
 @import './styles/button';
 
 Page {
   color: $black;
+  font-family: $font-sans;
+  font-size: 18;
 }
 
 ActionBar {
   background-color: $green;
   color: #ffffff;
+  font-family: $font-sans;
 }
 
 StackLayout,
