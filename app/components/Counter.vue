@@ -37,7 +37,6 @@ export default {
     increment() {
       this.$store.dispatch('increment');
     },
-
   },
 };
 </script>

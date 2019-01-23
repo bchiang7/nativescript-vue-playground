@@ -19,7 +19,7 @@
       <Button
         class="btn"
         text="Show Modal"
-        @tap="$showModal(detailPage)"
+        @tap="$showModal(modalPage)"
       />
     </StackLayout>
   </Page>
@@ -27,12 +27,14 @@
 
 <script>
 import Counter from './Counter';
+import Modal from './Modal';
 
 export default {
   data() {
     return {
       msg: 'Hello World!',
       counterPage: Counter,
+      modalPage: Modal,
     };
   },
 };
