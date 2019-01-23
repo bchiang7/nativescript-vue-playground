@@ -2,6 +2,8 @@ import Vue from 'nativescript-vue';
 import App from './components/App';
 import VueDevtools from 'nativescript-vue-devtools';
 
+/* global TNS_ENV */
+
 if (TNS_ENV !== 'production') {
   Vue.use(VueDevtools);
 }
