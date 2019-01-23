@@ -1,6 +1,7 @@
 import Vue from 'nativescript-vue';
 import App from './components/App';
 import VueDevtools from 'nativescript-vue-devtools';
+import store from './store';
 
 /* global TNS_ENV */
 
@@ -13,4 +14,5 @@ Vue.config.silent = (TNS_ENV === 'production');
 
 new Vue({
   render: h => h('frame', [h(App)]),
+  store,
 }).$start();

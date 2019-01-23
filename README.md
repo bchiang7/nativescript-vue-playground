@@ -77,6 +77,12 @@ tns debug <platform> --bundle
 tns run <platform> --bundle
 ```
 
+## [Debugging](https://docs.nativescript.org/tooling/debugging/debugging)
+
+[Chrome DevTools](https://docs.nativescript.org/tooling/debugging/chrome-devtools)
+
+[Using Vue DevTools](https://nativescript-vue.org/en/docs/getting-started/vue-devtools/)
+
 ## Resources
 
 [NativeScript Documentation](https://docs.nativescript.org/core-concepts/technical-overview)

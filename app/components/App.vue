@@ -1,37 +1,47 @@
 <template>
   <Page>
     <ActionBar title="Welcome to NativeScript-Vue!" />
-    <GridLayout columns="*" rows="*">
+
+    <StackLayout>
       <Label
         class="message"
         :text="msg"
         col="0"
         row="0"
       />
-    </GridLayout>
+
+      <Button
+        class="btn"
+        text="Go to Counter"
+        @tap="$navigateTo(counterPage)"
+      />
+
+      <Button
+        class="btn"
+        text="Show Modal"
+        @tap="$showModal(detailPage)"
+      />
+    </StackLayout>
   </Page>
 </template>
 
 <script>
+import Counter from './Counter';
+
 export default {
   data() {
     return {
       msg: 'Hello World!',
+      counterPage: Counter,
     };
   },
 };
 </script>
 
-<style scoped>
-ActionBar {
-  background-color: #53ba82;
-  color: #ffffff;
-}
-
+<style lang="scss" scoped>
 .message {
   vertical-align: center;
   text-align: center;
   font-size: 20;
-  color: #333333;
 }
 </style>

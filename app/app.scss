@@ -2,6 +2,21 @@
 // @see https://docs.nativescript.org/ui/styling
 
 // todo: add fonts
-// todo: add variables
-// todo: add base
-// todo: add mixins
+
+@import './styles/variables';
+@import './styles/button';
+
+Page {
+  color: $black;
+}
+
+ActionBar {
+  background-color: $green;
+  color: #ffffff;
+}
+
+StackLayout,
+GridLayout,
+FlexLayout {
+  margin: 30;
+}
