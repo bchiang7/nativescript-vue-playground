@@ -1,6 +1,6 @@
 {
   "name": "@upstatement/nativescript-vue-starter",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A native application built with NativeScript-Vue",
   "author": "bchiang7 <brittany.chiang@gmail.com>",
   "license": "MIT",
