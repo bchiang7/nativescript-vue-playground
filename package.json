@@ -32,7 +32,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@upstatement/eslint-config": "^0.3.1",
+    "@upstatement/eslint-config": "^0.4.0",
     "@upstatement/prettier-config": "^0.3.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.2",
