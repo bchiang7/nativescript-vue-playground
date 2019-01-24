@@ -6,6 +6,9 @@ A native mobile application built with [NativeScript-Vue](https://nativescript-v
 - Vuex
 - Sass
 - Vue DevTools
+- Custom Fonts
+- Toasts
+- Geolocation
 
 ## Prerequisites & Tooling
 
