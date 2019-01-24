@@ -33,6 +33,12 @@
         text="Go to list view"
         @tap="$navigateTo(listPage)"
       />
+
+      <Button
+        class="btn"
+        text="Geolocation!"
+        @tap="$navigateTo(geoPage)"
+      />
     </StackLayout>
   </Page>
 </template>
@@ -41,7 +47,8 @@
 import Counter from './Counter';
 import Modal from './Modal';
 import List from './List';
-const utils = require('tns-core-modules/utils/utils');
+import Geo from './Geo';
+import utils from 'tns-core-modules/utils/utils';
 
 export default {
   data() {
@@ -50,6 +57,7 @@ export default {
       counterPage: Counter,
       modalPage: Modal,
       listPage: List,
+      geoPage: Geo,
     };
   },
   methods: {
