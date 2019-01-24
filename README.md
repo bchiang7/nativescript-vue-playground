@@ -95,3 +95,5 @@ tns run <platform> --bundle
 [NativeScript Documentation](https://docs.nativescript.org/core-concepts/technical-overview)
 
 [NativeScript-Vue Documentation](https://nativescript-vue.org/)
+
+[NativeScript CLI Basics](https://docs.nativescript.org/start/cli-basics)

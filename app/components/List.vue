@@ -1,6 +1,12 @@
 <template>
   <Page>
-    <ActionBar title="List View" />
+    <ActionBar title="List View">
+      <NavigationButton
+        text="Go Back"
+        android.systemIcon="ic_menu_back"
+        @tap="$navigateBack"
+      />
+    </ActionBar>
 
     <ListView for="item in items" @itemTap="onItemTap">
       <v-template>
@@ -25,19 +31,19 @@ export default {
       items: [
         {
           id: 1,
-          text: 'one',
+          text: 'Click Me',
         },
         {
           id: 2,
-          text: 'two',
+          text: 'Click Me',
         },
         {
           id: 3,
-          text: 'three',
+          text: 'Click Me',
         },
         {
           id: 4,
-          text: 'four',
+          text: 'Click Me',
         },
       ],
     };

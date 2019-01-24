@@ -12,6 +12,12 @@
 
       <Button
         class="btn"
+        text="Launch a website"
+        @tap="launchURL('https://upstatement.com/')"
+      />
+
+      <Button
+        class="btn"
         text="Go to Counter"
         @tap="$navigateTo(counterPage)"
       />
@@ -35,6 +41,7 @@
 import Counter from './Counter';
 import Modal from './Modal';
 import List from './List';
+const utils = require('tns-core-modules/utils/utils');
 
 export default {
   data() {
@@ -44,6 +51,11 @@ export default {
       modalPage: Modal,
       listPage: List,
     };
+  },
+  methods: {
+    launchURL(url) {
+      utils.openUrl(url);
+    },
   },
 };
 </script>
