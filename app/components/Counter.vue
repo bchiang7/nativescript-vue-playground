@@ -3,7 +3,7 @@
     <ActionBar title="Counter">
       <NavigationButton
         text="Go Back"
-        android-system-icon="ic_menu_back"
+        android.systemIcon="ic_menu_back"
         @tap="$navigateBack"
       />
     </ActionBar>

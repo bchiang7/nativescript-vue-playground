@@ -21,6 +21,12 @@
         text="Show Modal"
         @tap="$showModal(modalPage)"
       />
+
+      <Button
+        class="btn"
+        text="Go to list view"
+        @tap="$navigateTo(listPage)"
+      />
     </StackLayout>
   </Page>
 </template>
@@ -28,6 +34,7 @@
 <script>
 import Counter from './Counter';
 import Modal from './Modal';
+import List from './List';
 
 export default {
   data() {
@@ -35,6 +42,7 @@ export default {
       msg: 'Hello World!',
       counterPage: Counter,
       modalPage: Modal,
+      listPage: List,
     };
   },
 };

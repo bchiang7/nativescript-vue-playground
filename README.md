@@ -1,6 +1,11 @@
 # NativeScript Vue Starter
 
-> A native mobile application built with [NativeScript-Vue](https://nativescript-vue.org/)
+A native mobile application built with [NativeScript-Vue](https://nativescript-vue.org/)
+
+- Vue
+- Vuex
+- Sass
+- Vue DevTools
 
 ## Prerequisites & Tooling
 
@@ -64,7 +69,7 @@ Make sure you have an Android Emulator set up by following the [docs](https://do
    tns run ios --bundle
    ```
 
-## Building the app
+## Running the App
 
 ```bash
 # Build for production
@@ -77,7 +82,9 @@ tns debug <platform> --bundle
 tns run <platform> --bundle
 ```
 
-## [Debugging](https://docs.nativescript.org/tooling/debugging/debugging)
+## Debugging
+
+[Debugging](https://docs.nativescript.org/tooling/debugging/debugging)
 
 [Chrome DevTools](https://docs.nativescript.org/tooling/debugging/chrome-devtools)
 
