@@ -48,7 +48,7 @@ import Counter from './Counter';
 import Modal from './Modal';
 import List from './List';
 import Geo from './Geo';
-import utils from 'tns-core-modules/utils/utils';
+const utilsModule = require('tns-core-modules/utils/utils');
 
 export default {
   data() {
@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     launchURL(url) {
-      utils.openUrl(url);
+      utilsModule.openUrl(url);
     },
   },
 };

@@ -13,7 +13,7 @@
         class="btn"
         @tap="decrement"
       />
-      <Label text="count" />
+      <Label :text="count" class="counter" />
       <Button
         text="+"
         class="btn"
@@ -46,16 +46,14 @@ FlexboxLayout {
   justify-content: center;
   align-items: center;
 
-  Label {
+  .counter {
     font-size: 70;
     width: 30%;
     text-align: center;
   }
 
   .btn {
-    font-size: 40;
-    width: 50;
-    height: 50;
+    font-size: 30;
   }
 }
 </style>
