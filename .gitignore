@@ -1,9 +1,24 @@
-# JetBrains project files
-.idea
-
 # NPM
 node_modules
 
 # NativeScript application
 hooks
 platforms
+
+.DS_Store
+
+# Cache and debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.stylelintcache
+.eslintcache
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sublime-*
