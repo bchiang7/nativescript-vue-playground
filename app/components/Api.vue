@@ -1,0 +1,49 @@
+<template>
+  <Page>
+    <ActionBar title="Who's that Pokemon?!">
+      <NavigationButton
+        text="Go Back"
+        android.systemIcon="ic_menu_back"
+        @tap="$navigateBack"
+      />
+    </ActionBar>
+    <GridLayout>
+      <ListView for="p in pokemon" class="list-group">
+        <v-template>
+          <StackLayout class="list-group-item">
+            <Label :text="p.name" />
+          </StackLayout>
+        </v-template>
+      </ListView>
+    </GridLayout>
+  </Page>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      pokemon: [],
+    };
+  },
+  created() {
+    this.getPokemon();
+  },
+  methods: {
+    async getPokemon() {
+      try {
+        const pokemon = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=151');
+        this.pokemon = pokemon.data.results;
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+
+</style>

@@ -39,16 +39,23 @@
         text="Geolocation!"
         @tap="$navigateTo(geoPage)"
       />
+
+      <Button
+        class="btn"
+        text="Hit an API"
+        @tap="$navigateTo(apiPage)"
+      />
     </StackLayout>
   </Page>
 </template>
 
 <script>
+const utilsModule = require('tns-core-modules/utils/utils');
 import Counter from './Counter';
 import Modal from './Modal';
 import List from './List';
 import Geo from './Geo';
-const utilsModule = require('tns-core-modules/utils/utils');
+import Api from './Api';
 
 export default {
   data() {
@@ -58,6 +65,7 @@ export default {
       modalPage: Modal,
       listPage: List,
       geoPage: Geo,
+      apiPage: Api,
     };
   },
   methods: {
