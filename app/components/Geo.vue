@@ -70,14 +70,14 @@ export default {
 
 <style lang="scss" scoped>
 .info {
-  justify-content: space-between;
+  @include flex-between;
 
   .key {
     text-transform: capitalize;
   }
 
   .value {
-    color: #777777;
+    color: $grey;
   }
 }
 StackLayout > StackLayout {

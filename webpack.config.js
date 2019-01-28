@@ -13,6 +13,8 @@ const nsWebpack = require('nativescript-dev-webpack');
 const nativescriptTarget = require('nativescript-dev-webpack/nativescript-target');
 const { NativeScriptWorkerPlugin } = require('nativescript-worker-loader/NativeScriptWorkerPlugin');
 
+const path = require('path');
+
 module.exports = env => {
   // Add your custom Activities, Services and other android app components here.
   const appComponents = [
@@ -150,52 +152,62 @@ module.exports = env => {
       ],
     },
     module: {
-      rules: [{
-        test: new RegExp(entryPath),
-        use: [
-          // Require all Android app components
-          platform === 'android' && {
-            loader: 'nativescript-dev-webpack/android-app-components-loader',
-            options: { modules: appComponents },
-          },
-
-          {
-            loader: 'nativescript-dev-webpack/bundle-config-loader',
-            options: {
-              registerPages: true, // applicable only for non-angular apps
-              loadCss: !snapshot, // load the application css if in debug mode
+      rules: [
+        {
+          test: new RegExp(entryPath),
+          use: [
+            // Require all Android app components
+            platform === 'android' && {
+              loader: 'nativescript-dev-webpack/android-app-components-loader',
+              options: { modules: appComponents },
             },
-          },
-        ].filter(loader => Boolean(loader)),
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'nativescript-dev-webpack/style-hot-loader',
-          'nativescript-dev-webpack/apply-css-loader.js',
-          { loader: 'css-loader', options: { minimize: false, url: false } },
-        ],
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'nativescript-dev-webpack/style-hot-loader',
-          'nativescript-dev-webpack/apply-css-loader.js',
-          { loader: 'css-loader', options: { minimize: false, url: false } },
-          'sass-loader',
-        ],
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          compiler: NsVueTemplateCompiler,
+
+            {
+              loader: 'nativescript-dev-webpack/bundle-config-loader',
+              options: {
+                registerPages: true, // applicable only for non-angular apps
+                loadCss: !snapshot, // load the application css if in debug mode
+              },
+            },
+          ].filter(loader => Boolean(loader)),
         },
-      },
+        {
+          test: /\.css$/,
+          use: [
+            'nativescript-dev-webpack/style-hot-loader',
+            'nativescript-dev-webpack/apply-css-loader.js',
+            { loader: 'css-loader', options: { minimize: false, url: false } },
+          ],
+        },
+        {
+          test: /\.scss$/,
+          use: [
+            'nativescript-dev-webpack/style-hot-loader',
+            'nativescript-dev-webpack/apply-css-loader.js',
+            { loader: 'css-loader', options: { minimize: false, url: false } },
+            'sass-loader',
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: [
+                  path.resolve(__dirname, 'app/styles/_variables.scss'),
+                  path.resolve(__dirname, 'app/styles/_mixins.scss'),
+                ],
+              },
+            },
+          ],
+        },
+        {
+          test: /\.js$/,
+          loader: 'babel-loader',
+        },
+        {
+          test: /\.vue$/,
+          loader: 'vue-loader',
+          options: {
+            compiler: NsVueTemplateCompiler,
+          },
+        },
       ],
     },
     plugins: [

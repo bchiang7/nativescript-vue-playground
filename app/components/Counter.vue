@@ -43,8 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 FlexboxLayout {
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 
   .counter {
     font-size: 70;

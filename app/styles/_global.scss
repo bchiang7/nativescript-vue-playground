@@ -1,0 +1,17 @@
+Page {
+  color: $black;
+  font-family: $font-sans;
+  font-size: 18;
+}
+
+ActionBar {
+  background-color: $green;
+  color: #ffffff;
+  font-family: $font-sans;
+}
+
+StackLayout,
+GridLayout,
+FlexLayout {
+  margin: 30;
+}

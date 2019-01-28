@@ -1,0 +1,9 @@
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  justify-content: space-between;
+  align-items: center;
+}
