@@ -1,6 +1,6 @@
 {
-  "name": "@upstatement/nativescript-vue-starter",
-  "version": "0.1.0",
+  "name": "nativescript-vue-playground",
+  "version": "0.0.0",
   "description": "A native application built with NativeScript-Vue",
   "author": "bchiang7 <brittany.chiang@gmail.com>",
   "license": "MIT",
