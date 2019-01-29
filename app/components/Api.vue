@@ -8,13 +8,18 @@
       />
     </ActionBar>
     <GridLayout>
-      <ListView for="p in pokemon" class="list-group">
+      <ListView
+        v-if="pokemon"
+        for="p in pokemon"
+        class="list-group"
+      >
         <v-template>
           <StackLayout class="list-group-item">
             <Label :text="p.name" />
           </StackLayout>
         </v-template>
       </ListView>
+      <ActivityIndicator v-else :busy="true" />
     </GridLayout>
   </Page>
 </template>
