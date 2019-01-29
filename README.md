@@ -1,15 +1,19 @@
 # NativeScript Vue Playground
 
-A native mobile application built with [NativeScript-Vue](https://nativescript-vue.org/)
+> A native mobile application built with [NativeScript-Vue](https://nativescript-vue.org/)
 
-- Vue
+What it does & What it's got
+
 - Vue DevTools
-- Vuex
+- ESLint & Prettier Configuration
+- Simple Vuex implementation
 - Sass (with access to variables & mixins in Vue templates)
 - Custom Fonts
-- Toasts
-- Geolocation
-- ESLint & Prettier Configuration
+- [Toasts](https://www.npmjs.com/package/nativescript-toast)
+- Pop a modal
+- [Geolocation](https://github.com/NativeScript/nativescript-geolocation)
+- Hits an API with Axios
+- Renders an image
 
 ## Prerequisites & Tooling
 
