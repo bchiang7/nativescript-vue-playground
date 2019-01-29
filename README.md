@@ -1,4 +1,4 @@
-# NativeScript Vue Starter
+# NativeScript Vue Playground
 
 A native mobile application built with [NativeScript-Vue](https://nativescript-vue.org/)
 
@@ -37,9 +37,9 @@ A native mobile application built with [NativeScript-Vue](https://nativescript-v
    ruby -e "$(curl -fsSL https://www.nativescript.org/setup/mac)"
    ```
 
-   The macOS script needs administrative access to run some commands using sudo; therefore, you may need to provide your password several times during execution. The macOS script also may take some time to complete, as it's installing the dependencies for both iOS and Android development. When the script finishes, close and restart your terminal.
+   > This macOS script needs administrative access to run some commands using sudo; therefore, you may need to provide your password several times during execution. The macOS script also may take some time to complete, as it's installing the dependencies for both iOS and Android development. When the script finishes, **close and restart your terminal**.
 
-   In case you hit any snags, refer to [NativeScript Advanced Setup for macOS](https://docs.nativescript.org/start/ns-setup-os-x).
+   If you hit any snags, refer to [NativeScript Advanced Setup for macOS](https://docs.nativescript.org/start/ns-setup-os-x).
 
 5. Verify the setup
 
@@ -51,11 +51,15 @@ A native mobile application built with [NativeScript-Vue](https://nativescript-v
 
 ### Device Emulators
 
-Assuming you're developing on a mac and have XCode installed, you should already have a the `Simulator` mac app for iOS. To check, just try searching for "Simulator" in spotlight.
+**iOS:** Assuming you're developing on a mac and have XCode installed, you should already have a the `Simulator` mac app for iOS. To check, just try searching for "Simulator" in spotlight.
 
-Make sure you have an Android Emulator setup by following the [docs](https://docs.nativescript.org/tooling/android-virtual-devices).
+**Android:** Follow the [docs](https://docs.nativescript.org/tooling/android-virtual-devices).
 
-Run `tns device` in your terminal to see your running emulators.
+To see your running emulators run
+
+```bash
+tns device
+```
 
 ## Getting Started
 
