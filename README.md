@@ -3,12 +3,13 @@
 A native mobile application built with [NativeScript-Vue](https://nativescript-vue.org/)
 
 - Vue
-- Vuex
-- Sass
 - Vue DevTools
+- Vuex
+- Sass (with access to variables & mixins in Vue templates)
 - Custom Fonts
 - Toasts
 - Geolocation
+- ESLint & Prettier Configuration
 
 ## Prerequisites & Tooling
 
@@ -52,7 +53,9 @@ A native mobile application built with [NativeScript-Vue](https://nativescript-v
 
 Assuming you're developing on a mac and have XCode installed, you should already have a the `Simulator` mac app for iOS. To check, just try searching for "Simulator" in spotlight.
 
-Make sure you have an Android Emulator set up by following the [docs](https://docs.nativescript.org/tooling/android-virtual-devices)
+Make sure you have an Android Emulator setup by following the [docs](https://docs.nativescript.org/tooling/android-virtual-devices).
+
+Run `tns device` in your terminal to see your running emulators.
 
 ## Getting Started
 

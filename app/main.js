@@ -1,7 +1,7 @@
 import Vue from 'nativescript-vue';
-import { App } from '~/components';
 import VueDevtools from 'nativescript-vue-devtools';
-import store from './store';
+import { App } from '~/components';
+import store from '~/store';
 
 /* global TNS_ENV */
 
