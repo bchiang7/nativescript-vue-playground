@@ -31,6 +31,19 @@
 
         <Button
           class="btn"
+          text="Tap for a surprise"
+          @tap="showPic"
+        />
+
+        <Image
+          v-show="showImage"
+          src="~/assets/images/NativeScript-Vue.png"
+          stretch="none"
+          horizontal-align="center"
+        />
+
+        <Button
+          class="btn"
           text="Go to list view"
           @tap="$navigateTo(listPage)"
         />
@@ -49,15 +62,8 @@
 
         <Button
           class="btn"
-          text="Tap for a surprise"
-          @tap="showPic"
-        />
-
-        <Image
-          v-show="showImage"
-          src="~/assets/images/NativeScript-Vue.png"
-          stretch="none"
-          horizontal-align="center"
+          text="Phone Things"
+          @tap="$navigateTo(phonePage)"
         />
       </StackLayout>
     </ScrollView>
@@ -66,7 +72,7 @@
 
 <script>
 const utilsModule = require('tns-core-modules/utils/utils');
-import { Counter, Modal, List, Geo, Api } from '~/components';
+import { Counter, Modal, List, Geo, Api, Phone } from '~/components';
 
 export default {
   data() {
@@ -78,6 +84,7 @@ export default {
       listPage: List,
       geoPage: Geo,
       apiPage: Api,
+      phonePage: Phone,
     };
   },
   methods: {

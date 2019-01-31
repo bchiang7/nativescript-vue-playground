@@ -14,6 +14,7 @@ What it does & What it's got
 - [Geolocation](https://github.com/NativeScript/nativescript-geolocation)
 - Hits an API with Axios
 - Renders an image
+- [Launches phone & SMS with a number](https://github.com/msywensky/nativescript-phone)
 
 ## Prerequisites & Tooling
 
