@@ -35,13 +35,13 @@ What it does & What it's got
 
    Check out the [NativeScript CLI Basics](https://docs.nativescript.org/start/cli-basics)
 
-4. Install iOS and Android requirements
+4. Install iOS and Android requirements (⚠️ Warning: this step takes a while!)
 
    ```bash
    ruby -e "$(curl -fsSL https://www.nativescript.org/setup/mac)"
    ```
 
-   > This macOS script needs administrative access to run some commands using sudo; therefore, you may need to provide your password several times during execution. The macOS script also may take some time to complete, as it's installing the dependencies for both iOS and Android development. When the script finishes, **close and restart your terminal**.
+   > NOTE: This macOS script needs administrative access to run some commands using sudo; therefore, you may need to provide your password several times during execution. The macOS script also may take some time to complete, as it's installing the dependencies for both iOS and Android development. When the script finishes, **close and restart your terminal**.
 
    If you hit any snags, refer to [NativeScript Advanced Setup for macOS](https://docs.nativescript.org/start/ns-setup-os-x).
 
