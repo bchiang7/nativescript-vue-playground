@@ -20,6 +20,13 @@
         @tap="text"
       />
     </StackLayout>
+    <!-- <Gradient direction="to right" colors="#FF0077, red, #FF00FF">
+      <Label
+        text="Here is a gradient"
+        horizontalAlignment="center"
+        style="color: white; padding: 20"
+      />
+    </Gradient> -->
   </Page>
 </template>
 

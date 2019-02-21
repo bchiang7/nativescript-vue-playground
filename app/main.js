@@ -3,6 +3,8 @@ import Vue from 'nativescript-vue';
 import { App } from '~/components';
 import store from '~/store';
 
+Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient);
+
 /* global TNS_ENV */
 
 if (TNS_ENV !== 'production') {
