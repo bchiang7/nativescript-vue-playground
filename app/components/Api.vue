@@ -33,7 +33,7 @@ export default {
       pokemon: [],
     };
   },
-  created() {
+  mounted() {
     this.getPokemon();
   },
   methods: {

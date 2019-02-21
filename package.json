@@ -5,6 +5,9 @@
   "author": "bchiang7 <brittany.chiang@gmail.com>",
   "license": "MIT",
   "main": "",
+  "engines": {
+    "node": "10.15.0"
+  },
   "keywords": [],
   "nativescript": {
     "id": "org.nativescript.application",
@@ -44,7 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@upstatement/eslint-config": "^0.4.0",
+    "@upstatement/eslint-config": "^0.4.1",
     "@upstatement/prettier-config": "^0.3.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.2",

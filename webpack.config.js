@@ -112,6 +112,7 @@ module.exports = env => {
       'setImmediate': false,
       'fs': 'empty',
       '__dirname': false,
+      'net': 'empty',
     },
     devtool: 'none',
     optimization: {
