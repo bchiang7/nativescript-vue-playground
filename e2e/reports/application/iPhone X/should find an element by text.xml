@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><AppiumAUT><XCUIElementTypeApplication type="XCUIElementTypeApplication" name="NativeScript Vue Starter" label="NativeScript Vue Starter" enabled="true" visible="true" x="0" y="0" width="375" height="812">
+  <XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="375" height="812">
+    <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="375" height="812">
+      <XCUIElementTypeNavigationBar type="XCUIElementTypeNavigationBar" name="Welcome to NativeScript-Vue!" enabled="true" visible="true" x="0" y="44" width="375" height="44">
+        <XCUIElementTypeOther type="XCUIElementTypeOther" name="Welcome to NativeScript-Vue!" label="Welcome to NativeScript-Vue!" enabled="true" visible="true" x="67" y="55" width="241" height="21"/>
+      </XCUIElementTypeNavigationBar>
+      <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="375" height="812">
+        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="375" height="812">
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="375" height="812">
+            <XCUIElementTypeScrollView type="XCUIElementTypeScrollView" enabled="true" visible="true" x="0" y="0" width="375" height="812">
+              <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="30" y="118" width="315" height="690">
+                <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Hello World!" name="Hello World!" label="Hello World!" enabled="true" visible="true" x="30" y="118" width="315" height="26"/>
+                <XCUIElementTypeButton type="XCUIElementTypeButton" name="Launch a website" label="Launch a website" enabled="true" visible="true" x="30" y="153" width="315" height="64"/>
+                <XCUIElementTypeButton type="XCUIElementTypeButton" name="Go to Counter" label="Go to Counter" enabled="true" visible="true" x="30" y="236" width="315" height="64"/>
+                <XCUIElementTypeButton type="XCUIElementTypeButton" name="Show Modal" label="Show Modal" enabled="true" visible="true" x="30" y="319" width="315" height="64"/>
+                <XCUIElementTypeButton type="XCUIElementTypeButton" name="Tap for a surprise" label="Tap for a surprise" enabled="true" visible="true" x="30" y="402" width="315" height="64"/>
+                <XCUIElementTypeButton type="XCUIElementTypeButton" name="Go to list view" label="Go to list view" enabled="true" visible="true" x="30" y="485" width="315" height="64"/>
+                <XCUIElementTypeButton type="XCUIElementTypeButton" name="Geolocation!" label="Geolocation!" enabled="true" visible="true" x="30" y="568" width="315" height="64"/>
+                <XCUIElementTypeButton type="XCUIElementTypeButton" name="Hit an API" label="Hit an API" enabled="true" visible="true" x="30" y="651" width="315" height="64"/>
+                <XCUIElementTypeButton type="XCUIElementTypeButton" name="Phone Things" label="Phone Things" enabled="true" visible="true" x="30" y="734" width="315" height="64"/>
+              </XCUIElementTypeOther>
+            </XCUIElementTypeScrollView>
+          </XCUIElementTypeOther>
+        </XCUIElementTypeOther>
+      </XCUIElementTypeOther>
+    </XCUIElementTypeOther>
+  </XCUIElementTypeWindow>
+  <XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="false" x="0" y="0" width="375" height="812">
+    <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="0" y="0" width="375" height="812"/>
+  </XCUIElementTypeWindow>
+  <XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" x="0" y="0" width="375" height="812">
+    <XCUIElementTypeStatusBar type="XCUIElementTypeStatusBar" enabled="true" visible="true" x="0" y="0" width="375" height="44">
+      <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="375" height="44">
+        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="0" y="0" width="375" height="44">
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="6" y="-5" width="180" height="12"/>
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="190" y="-5" width="180" height="12"/>
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="6" y="17" width="180" height="12"/>
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="13" y="14" width="67" height="15">
+            <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="10:26 AM" name="10:26 AM" label="10:26 AM" enabled="true" visible="false" x="26" y="14" width="41" height="18"/>
+          </XCUIElementTypeOther>
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="21" y="8" width="56" height="22"/>
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="190" y="17" width="180" height="12"/>
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="294" y="14" width="67" height="15">
+            <XCUIElementTypeOther type="XCUIElementTypeOther" value="No signal" name="Cellular" label="Cellular" enabled="true" visible="false" x="294" y="17" width="17" height="12"/>
+            <XCUIElementTypeOther type="XCUIElementTypeOther" value="SSID, 3 of 3 Wi-Fi bars" name="3 of 3 Wi-Fi bars" enabled="true" visible="false" x="316" y="17" width="16" height="12"/>
+            <XCUIElementTypeOther type="XCUIElementTypeOther" value="Charging" name="95% battery power" label="95% battery power" enabled="true" visible="false" x="336" y="17" width="25" height="12"/>
+          </XCUIElementTypeOther>
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" x="294" y="14" width="67" height="15"/>
+        </XCUIElementTypeOther>
+        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" x="8" y="24" width="82" height="14"/>
+      </XCUIElementTypeOther>
+    </XCUIElementTypeStatusBar>
+  </XCUIElementTypeWindow>
+</XCUIElementTypeApplication></AppiumAUT>

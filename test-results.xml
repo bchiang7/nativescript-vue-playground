@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="6.199" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-03-06T15:24:42" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="sample scenario" timestamp="2019-03-06T15:25:47" tests="1" file="/Users/Jon/Sites/nativescript-vue-playground/e2e/sample.e2e-spec.js" failures="1" time="6.199">
+    <testcase name="sample scenario should find an element by text" time="6.199" classname="should find an element by text">
+      <failure message="[waitForElementByXPath(&quot;//*[contains(@label,&apos;sdfsffsd&apos;) or contains(@value,&apos;sdfsffsd&apos;) or contains(@hint,&apos;sdfsffsd&apos;)]&quot;,5000)] Element condition wasn&apos;t satisfied!" type="Error"><![CDATA[Error: [waitForElementByXPath("//*[contains(@label,'sdfsffsd') or contains(@value,'sdfsffsd') or contains(@hint,'sdfsffsd')]",5000)] Element condition wasn't satisfied!
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/wd/lib/commands.js:980:12
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/wd/lib/commands.js:885:11
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/wd/lib/commands.js:967:13
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/wd/node_modules/async/dist/async.js:3679:13
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/wd/node_modules/async/dist/async.js:486:20
+    at replenish (node_modules/wd/node_modules/async/dist/async.js:879:29)
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/wd/node_modules/async/dist/async.js:888:13
+    at eachOfLimit (node_modules/wd/node_modules/async/dist/async.js:915:26)
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/wd/node_modules/async/dist/async.js:920:20
+    at _parallel (node_modules/wd/node_modules/async/dist/async.js:3670:9)
+    at Object.series (node_modules/wd/node_modules/async/dist/async.js:4496:7)
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/wd/lib/commands.js:965:15
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/wd/lib/promise-webdriver.js:52:11
+    at _fulfilled (node_modules/q/q.js:834:54)
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/q/q.js:863:30
+    at Promise.promise.promiseDispatch (node_modules/q/q.js:796:13)
+    at /Users/Jon/Sites/nativescript-vue-playground/node_modules/q/q.js:604:44
+    at runSingle (node_modules/q/q.js:137:13)
+    at flush (node_modules/q/q.js:125:13)
+    at process._tickCallback (internal/process/next_tick.js:61:11)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
