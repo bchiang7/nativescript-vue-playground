@@ -1,11 +1,6 @@
 {
   "extends": "@upstatement/eslint-config/vue",
   "rules": {
-    "vue/attribute-hyphenation": [
-      "always",
-      {
-        "ignore": ["android.systemIcon"]
-      }
-    ]
+    "vue/attribute-hyphenation": ["error", "never"]
   }
 }

@@ -17,12 +17,9 @@ const path = require('path');
 
 module.exports = env => {
   // Add your custom Activities, Services and other android app components here.
-  const appComponents = [
-    'tns-core-modules/ui/frame',
-    'tns-core-modules/ui/frame/activity',
-  ];
+  const appComponents = ['tns-core-modules/ui/frame', 'tns-core-modules/ui/frame/activity'];
 
-  const platform = env && (env.android && 'android' || env.ios && 'ios');
+  const platform = env && ((env.android && 'android') || (env.ios && 'ios'));
   if (!platform) {
     throw new Error('You need to provide a target platform!');
   }
@@ -48,9 +45,7 @@ module.exports = env => {
     hmr, // --env.hmr
   } = env;
 
-  const externals = (env.externals || []).map((e) => { // --env.externals
-    return new RegExp(`${e  }.*`);
-  });
+  const externals = (env.externals || []).map(e => new RegExp(`${e}.*`));
 
   const mode = production ? 'production' : 'development';
 
@@ -96,7 +91,7 @@ module.exports = env => {
       alias: {
         '~': appFullPath,
         '@': appFullPath,
-        'vue': 'nativescript-vue',
+        vue$: 'nativescript-vue',
       },
       // don't resolve symlinks to symlinked modules
       symlinks: false,
@@ -107,12 +102,12 @@ module.exports = env => {
     },
     node: {
       // Disable node shims that conflict with NativeScript
-      'http': false,
-      'timers': false,
-      'setImmediate': false,
-      'fs': 'empty',
-      '__dirname': false,
-      'net': 'empty',
+      http: false,
+      timers: false,
+      setImmediate: false,
+      fs: 'empty',
+      __dirname: false,
+      net: 'empty',
     },
     devtool: 'none',
     optimization: {
@@ -121,11 +116,12 @@ module.exports = env => {
           vendor: {
             name: 'vendor',
             chunks: 'all',
-            test: (module) => {
+            test: module => {
               const moduleName = module.nameForCondition ? module.nameForCondition() : '';
-              return /[\\/]node_modules[\\/]/.test(moduleName) ||
-                                appComponents.some(comp => comp === moduleName);
-
+              return (
+                /[\\/]node_modules[\\/]/.test(moduleName) ||
+                appComponents.some(comp => comp === moduleName)
+              );
             },
             enforce: true,
           },
@@ -143,7 +139,7 @@ module.exports = env => {
             compress: {
               // The Android SBG has problems parsing the output
               // when these options are enabled
-              'collapse_vars': platform !== 'android',
+              collapse_vars: platform !== 'android',
               sequences: platform !== 'android',
             },
             safari10: platform === 'ios',
@@ -190,10 +186,7 @@ module.exports = env => {
             {
               loader: 'sass-resources-loader',
               options: {
-                resources: [
-                  path.resolve(__dirname, 'app/styles/_variables.scss'),
-                  path.resolve(__dirname, 'app/styles/_mixins.scss'),
-                ],
+                resources: [path.resolve(__dirname, 'app/styles.scss')],
               },
             },
           ],
@@ -218,27 +211,25 @@ module.exports = env => {
       // Define useful constants like TNS_WEBPACK
       new webpack.DefinePlugin({
         'global.TNS_WEBPACK': 'true',
-        'TNS_ENV': JSON.stringify(mode),
+        TNS_ENV: JSON.stringify(mode),
       }),
       // Remove all files from the out dir.
       new CleanWebpackPlugin([`${dist}/**/*`]),
       // Copy native app resources to out dir.
-      new CopyWebpackPlugin([{
-        from: `${appResourcesFullPath}/${appResourcesPlatformDir}`,
-        to: `${dist}/App_Resources/${appResourcesPlatformDir}`,
-        context: projectRoot,
-      }]),
-      // Copy assets to out dir. Add your own globs as needed.
       new CopyWebpackPlugin([
-        { from: 'fonts/**' },
-        { from: '**/*.+(jpg|png)' },
-        { from: 'assets/**/*' },
-      ], { ignore: [`${relative(appPath, appResourcesFullPath)}/**`] }),
-      // Generate a bundle starter script and activate it in package.json
-      new nsWebpack.GenerateBundleStarterPlugin([
-        './vendor',
-        './bundle',
+        {
+          from: `${appResourcesFullPath}/${appResourcesPlatformDir}`,
+          to: `${dist}/App_Resources/${appResourcesPlatformDir}`,
+          context: projectRoot,
+        },
       ]),
+      // Copy assets to out dir. Add your own globs as needed.
+      new CopyWebpackPlugin(
+        [{ from: 'fonts/**' }, { from: '**/*.+(jpg|png)' }, { from: 'assets/**/*' }],
+        { ignore: [`${relative(appPath, appResourcesFullPath)}/**`] },
+      ),
+      // Generate a bundle starter script and activate it in package.json
+      new nsWebpack.GenerateBundleStarterPlugin(['./vendor', './bundle']),
       // For instructions on how to set up workers with webpack
       // check out https://github.com/nativescript/worker-loader
       new NativeScriptWorkerPlugin(),
@@ -253,24 +244,26 @@ module.exports = env => {
 
   if (report) {
     // Generate report files for bundles content
-    config.plugins.push(new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false,
-      generateStatsFile: true,
-      reportFilename: resolve(projectRoot, 'report', `report.html`),
-      statsFilename: resolve(projectRoot, 'report', `stats.json`),
-    }));
+    config.plugins.push(
+      new BundleAnalyzerPlugin({
+        analyzerMode: 'static',
+        openAnalyzer: false,
+        generateStatsFile: true,
+        reportFilename: resolve(projectRoot, 'report', `report.html`),
+        statsFilename: resolve(projectRoot, 'report', `stats.json`),
+      }),
+    );
   }
 
   if (snapshot) {
-    config.plugins.push(new nsWebpack.NativeScriptSnapshotPlugin({
-      chunk: 'vendor',
-      requireModules: [
-        'tns-core-modules/bundle-entry-points',
-      ],
-      projectRoot,
-      webpackConfig: config,
-    }));
+    config.plugins.push(
+      new nsWebpack.NativeScriptSnapshotPlugin({
+        chunk: 'vendor',
+        requireModules: ['tns-core-modules/bundle-entry-points'],
+        projectRoot,
+        webpackConfig: config,
+      }),
+    );
   }
 
   if (hmr) {

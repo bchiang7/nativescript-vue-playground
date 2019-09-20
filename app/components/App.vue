@@ -5,65 +5,65 @@
     <ScrollView>
       <StackLayout>
         <Label
-          class="message"
           :text="msg"
+          class="message"
           col="0"
           row="0"
         />
 
         <Button
+          @tap="launchURL('https://upstatement.com/')"
           class="btn"
           text="Launch a website"
-          @tap="launchURL('https://upstatement.com/')"
         />
 
         <Button
+          @tap="$navigateTo(counterPage)"
           class="btn"
           text="Go to Counter"
-          @tap="$navigateTo(counterPage)"
         />
 
         <Button
+          @tap="$showModal(modalPage)"
           class="btn"
           text="Show Modal"
-          @tap="$showModal(modalPage)"
         />
 
         <Button
+          @tap="showPic"
           class="btn"
           text="Tap for a surprise"
-          @tap="showPic"
         />
 
         <Image
           v-show="showImage"
           src="~/assets/images/NativeScript-Vue.png"
           stretch="none"
-          horizontal-align="center"
+          horizontalAlign="center"
         />
 
         <Button
+          @tap="$navigateTo(listPage)"
           class="btn"
           text="Go to list view"
-          @tap="$navigateTo(listPage)"
         />
 
         <Button
+          @tap="$navigateTo(geoPage)"
           class="btn"
           text="Geolocation!"
-          @tap="$navigateTo(geoPage)"
         />
 
         <Button
+          @tap="$navigateTo(apiPage)"
           class="btn"
           text="Hit an API"
-          @tap="$navigateTo(apiPage)"
         />
 
         <Button
+          @tap="$navigateTo(phonePage)"
           class="btn"
           text="Phone Things"
-          @tap="$navigateTo(phonePage)"
         />
       </StackLayout>
     </ScrollView>
@@ -72,7 +72,7 @@
 
 <script>
 const utilsModule = require('tns-core-modules/utils/utils');
-import { Counter, Modal, List, Geo, Api, Phone } from '~/components';
+import { Counter, Modal, List, Geo, Api, Phone } from '@/components';
 
 export default {
   data() {

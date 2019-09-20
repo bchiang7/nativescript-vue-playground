@@ -1,7 +1,8 @@
 import Vue from 'nativescript-vue';
 // import VueDevtools from 'nativescript-vue-devtools';
-import { App } from '~/components';
-import store from '~/store';
+import { App } from '@/components';
+import store from '@/store';
+import './styles.scss';
 
 Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient);
 
@@ -11,8 +12,7 @@ if (TNS_ENV !== 'production') {
   // Vue.use(VueDevtools);
 }
 // Prints Vue logs when --env.production is *NOT* set while building
-// Vue.config.silent = (TNS_ENV === 'production');
-
+Vue.config.silent = TNS_ENV === 'production';
 
 new Vue({
   render: h => h('frame', [h(App)]),
