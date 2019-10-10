@@ -2,9 +2,9 @@
   <Page>
     <ActionBar title="Who's that Pokemon?!">
       <NavigationButton
+        @tap="$navigateBack"
         text="Go Back"
         android.systemIcon="ic_menu_back"
-        @tap="$navigateBack"
       />
     </ActionBar>
     <GridLayout>

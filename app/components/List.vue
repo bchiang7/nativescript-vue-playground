@@ -2,13 +2,13 @@
   <Page>
     <ActionBar title="List View">
       <NavigationButton
+        @tap="$navigateBack"
         text="Go Back"
         android.systemIcon="ic_menu_back"
-        @tap="$navigateBack"
       />
     </ActionBar>
 
-    <ListView for="item in items" @itemTap="onItemTap">
+    <ListView @itemTap="onItemTap" for="item in items">
       <v-template>
         <Label :text="item.text" />
       </v-template>
@@ -22,9 +22,6 @@
 </template>
 
 <script>
-import * as Toast from 'nativescript-toast';
-/* global action */
-
 export default {
   data() {
     return {
@@ -50,8 +47,11 @@ export default {
   },
   methods: {
     onItemTap() {
-      action('This is a action dialog', 'Cancel', ['Option 1', 'Option 2'])
-        .then(result => Toast.makeText(`You clicked ${result}`).show());
+      alert({
+        title: 'Item tapped!',
+        message: 'This is an alert',
+        okButtonText: 'OK',
+      });
     },
   },
 };

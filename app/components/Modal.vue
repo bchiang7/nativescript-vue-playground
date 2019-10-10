@@ -6,7 +6,7 @@
       <Label text="Here is a modal" />
 
       <StackLayout>
-        <Button text="Close Modal" @tap="$modal.close" />
+        <Button @tap="$modal.close" text="Close Modal" />
       </StackLayout>
     </StackLayout>
   </Page>

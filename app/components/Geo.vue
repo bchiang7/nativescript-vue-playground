@@ -2,17 +2,17 @@
   <Page>
     <ActionBar title="Geolocation">
       <NavigationButton
+        @tap="$navigateBack"
         text="Go Back"
         android.systemIcon="ic_menu_back"
-        @tap="$navigateBack"
       />
     </ActionBar>
 
     <StackLayout>
       <Button
+        @tap="getLocation"
         class="btn"
         text="Get Current Location"
-        @tap="getLocation"
       />
 
       <ActivityIndicator :busy="isBusy" />
@@ -21,8 +21,8 @@
         <ListView for="item in locationInfo">
           <v-template>
             <FlexboxLayout class="info">
-              <Label class="key" :text="item.key" />
-              <Label class="value" :text="item.value" />
+              <Label :text="item.key" class="key" />
+              <Label :text="item.value" class="value" />
             </FlexboxLayout>
           </v-template>
         </ListView>
@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.info {
+/* .info {
   @include flex-between;
 
   .key {
@@ -86,5 +86,5 @@ StackLayout > StackLayout {
 Label {
   font-size: 20;
   padding: 10 0;
-}
+} */
 </style>

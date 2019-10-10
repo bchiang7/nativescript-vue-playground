@@ -2,22 +2,22 @@
   <Page>
     <ActionBar title="Let's do phone things">
       <NavigationButton
+        @tap="$navigateBack"
         text="Go Back"
         android.systemIcon="ic_menu_back"
-        @tap="$navigateBack"
       />
     </ActionBar>
     <StackLayout>
       <Button
+        @tap="call"
         class="btn"
         text="Call Me Beep Me"
-        @tap="call"
       />
 
       <Button
+        @tap="text"
         class="btn"
         text="Text Me"
-        @tap="text"
       />
     </StackLayout>
     <!-- <Gradient direction="to right" colors="#FF0077, red, #FF00FF">

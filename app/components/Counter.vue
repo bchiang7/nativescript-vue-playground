@@ -2,22 +2,22 @@
   <Page>
     <ActionBar title="Counter">
       <NavigationButton
+        @tap="$navigateBack"
         text="Go Back"
         android.systemIcon="ic_menu_back"
-        @tap="$navigateBack"
       />
     </ActionBar>
     <FlexboxLayout>
       <Button
+        @tap="decrement"
         text="-"
         class="btn"
-        @tap="decrement"
       />
       <Label :text="count" class="counter" />
       <Button
+        @tap="increment"
         text="+"
         class="btn"
-        @tap="increment"
       />
     </FlexboxLayout>
   </Page>
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-FlexboxLayout {
+/* FlexboxLayout {
   @include flex-center;
 
   .counter {
@@ -54,5 +54,5 @@ FlexboxLayout {
   .btn {
     font-size: 30;
   }
-}
+} */
 </style>
