@@ -7,9 +7,8 @@ What it does & What it's got
 - Vue DevTools
 - ESLint & Prettier Configuration
 - Simple Vuex implementation
-- Sass (with access to variables & mixins in Vue templates)
+- Sass
 - Custom Fonts
-- [Toasts](https://www.npmjs.com/package/nativescript-toast)
 - Pop a modal
 - [Geolocation](https://github.com/NativeScript/nativescript-geolocation)
 - Hits an API with Axios
@@ -79,22 +78,23 @@ tns device
 3. Build, watch for changes and run the application
 
    ```bash
-   tns run android --bundle
-   # or
-   tns run ios --bundle
+   tns run
    ```
 
-## Running the App
+## Usage
 
-```bash
-# Build for production
-tns build <platform> --bundle
-
-# Build, watch for changes and debug the application
-tns debug <platform> --bundle
+``` bash
+# Preview on device
+tns preview
 
 # Build, watch for changes and run the application
-tns run <platform> --bundle
+tns run
+
+# Build, watch for changes and debug the application
+tns debug <platform>
+
+# Build for production
+tns build <platform> --env.production
 ```
 
 ## Debugging
