@@ -15,6 +15,8 @@ Vue.prototype.$store = store;
 
 Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient);
 
+console.warn('📣: main.js sdfsdf');
+
 new Vue({
   store,
   render: h => h('frame', [h(App)]),
