@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* FlexboxLayout {
+FlexboxLayout {
   @include flex-center;
 
   .counter {
@@ -54,5 +54,5 @@ export default {
   .btn {
     font-size: 30;
   }
-} */
+}
 </style>

@@ -3,20 +3,30 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
-  state: {
-    count: 0,
-  },
-  mutations: {
-    increment: state => state.count++,
-    decrement: state => state.count--,
-  },
-  actions: {
-    increment: ({ commit }) => commit('increment'),
-    decrement: ({ commit }) => commit('decrement'),
-  },
-});
+const state = {
+  count: 0,
+};
 
-Vue.prototype.$store = store;
+const getters = {};
+
+const actions = {
+  increment: ({ commit }) => commit('increment'),
+  decrement: ({ commit }) => commit('decrement'),
+};
+
+const mutations = {
+  increment: state => state.count++,
+  decrement: state => state.count--,
+};
+
+const strict = process.env.NODE_ENV !== 'production';
+
+const store = new Vuex.Store({
+  state,
+  getters,
+  actions,
+  mutations,
+  strict,
+});
 
 export default store;

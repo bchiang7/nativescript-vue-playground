@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* .info {
+.info {
   @include flex-between;
 
   .key {
@@ -86,5 +86,5 @@ StackLayout > StackLayout {
 Label {
   font-size: 20;
   padding: 10 0;
-} */
+}
 </style>

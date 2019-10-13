@@ -220,6 +220,12 @@ module.exports = env => {
             'nativescript-dev-webpack/apply-css-loader.js',
             { loader: 'css-loader', options: { url: false } },
             'sass-loader',
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: [resolve(__dirname, 'app/app.scss')],
+              },
+            },
           ],
         },
         {
